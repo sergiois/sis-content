@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" type="plugin" group="content" method="upgrade">
+    <name>plg_content_sis_content</name>
+    <creationDate>January 2021</creationDate>
+	<copyright>(C) 2021 Sergio Iglesias. All rights reserved.</copyright>
+	<author>Sergio Iglesias</author>
+	<authorEmail>info@sergioiglesias.net</authorEmail>
+	<authorUrl>https://sergioiglesias.net</authorUrl>
+	<copyright>Copyright © 2021 - All rights reserved.</copyright>
+	<license>GNU General Public License v2.0</license>
+	<version>1.0.0</version>
+	<description>PLG_CONTENT_SIS_CONTENT_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="sis_content">sis_content.php</filename>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB.plg_content_sis_content.ini</language>
+        <language tag="en-GB">en-GB.plg_content_sis_content.sys.ini</language>
+        <language tag="es-ES">es-ES.plg_content_sis_content.ini</language>
+        <language tag="es-ES">es-ES.plg_content_sis_content.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">			
+				<field name="catids" type="category" extension="com_content" multiple="true" size="10" default="all" label="PLG_SIS_CONTENT_CATEGORIES_LABEL" description="PLG_SIS_CONTENT_CATEGORIES_DESC" />
+				<field name="position" type="list" default="2" label="PLG_SIS_CONTENT_POSITION_LABEL" description="PLG_SIS_CONTENT_POSITION_DESC">
+					<option value="1">PLG_SIS_CONTENT_POSITION_OPTION_1</option>
+					<option value="2">PLG_SIS_CONTENT_POSITION_OPTION_2</option>
+					<option value="3">PLG_SIS_CONTENT_POSITION_OPTION_3</option>
+				</field>
+                <field name="custom" type="editor" label="PLG_SIS_CONTENT_CUSTOM_LABEL" description="PLG_SIS_CONTENT_CUSTOM_DESC" filter="safehtml" />
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+		<server type="extension" name="SIS Content">https://sergiois.github.io/sis_content.xml</server>
+    </updateservers>
+</extension>

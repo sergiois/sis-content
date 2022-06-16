@@ -21,7 +21,11 @@
     </languages>
     <config>
         <fields name="params">
-            <fieldset name="basic">			
+            <fieldset name="basic">
+                <field name="showinprint" type="radio" default="0" label="PLG_SIS_CONTENT_PRINT_LABEL" description="" class="btn-group btn-group-yesno">
+				  <option value="1">JYES</option>
+				  <option value="0">JNO</option>
+				</field>	
 				<field name="catids" type="category" extension="com_content" multiple="true" size="10" default="all" label="PLG_SIS_CONTENT_CATEGORIES_LABEL" description="PLG_SIS_CONTENT_CATEGORIES_DESC" />
 				<field name="position" type="list" default="2" label="PLG_SIS_CONTENT_POSITION_LABEL" description="PLG_SIS_CONTENT_POSITION_DESC">
 					<option value="1">PLG_SIS_CONTENT_POSITION_OPTION_1</option>

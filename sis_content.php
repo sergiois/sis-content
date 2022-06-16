@@ -23,7 +23,13 @@ class PlgContentSIS_Content extends CMSPlugin
 		parent::__construct($subject, $config);
 
 		$app = Factory::getApplication();
+		$tmpl = Factory::getApplication()->input->get('tmpl');
 		if ($app->isClient('administrator') || $app->get('offline', '0'))
+		{
+			return;
+		}
+
+		if(!$this->params->get('showinprint', 0) && $tmpl == 'component')
 		{
 			return;
 		}

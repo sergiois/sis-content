@@ -16,8 +16,11 @@ Joomla Content plugin to display custom HTML in a position of an article.
 ### Version 1.0.0 [2021-03-01]
 * **[Added]** Custom HTML
 
+### Version 1.0.1 [2022-06-16]
+* **[Added]** Show in print view
+
 * * *
 
 ## Copyright & License
 This plugin is licensed under GNU LESSER GENERAL PUBLIC LICENSE.
-Copyright (C) 2021 [Sergio Iglesias](https://sergioiglesias.net) - All rights reserved.
+Copyright (C) 2022 [Sergio Iglesias](https://sergioiglesias.net) - All rights reserved.

@@ -39,7 +39,9 @@ class PlgContentSIS_Content extends CMSPlugin
 
 	function onContentAfterDisplay($context, &$article, &$params, $page = 0)
 	{
-		if (($this->position  == 2 || $this->position == 4) && $context != 'com_content.category')
+		$allowed_contexts = array('com_content.category', 'com_content.categories', 'com_content.featured');
+
+		if (($this->position  == 2 || $this->position == 4) && !in_array($context, $allowed_contexts))
 		{
 			return $this->getSISContent($article);
 		}
@@ -47,7 +49,9 @@ class PlgContentSIS_Content extends CMSPlugin
 	
 	public function onContentAfterTitle($context, &$article, &$params, $page = 0)
 	{
-		if ($this->position == 3 && $context != 'com_content.category') 
+		$allowed_contexts = array('com_content.category', 'com_content.categories', 'com_content.featured');
+
+		if ($this->position == 3 && !in_array($context, $allowed_contexts)) 
 		{
 			return $this->getSISContent($article);
 		}
@@ -55,7 +59,9 @@ class PlgContentSIS_Content extends CMSPlugin
 		
 	function onContentBeforeDisplay($context, &$article, &$params, $page=0)
 	{
-		if (($this->position == 1 || $this->position == 4) && $context != 'com_content.category')
+		$allowed_contexts = array('com_content.category', 'com_content.categories', 'com_content.featured');
+
+		if (($this->position == 1 || $this->position == 4) && !in_array($context, $allowed_contexts))
 		{
 			return $this->getSISContent($article);
 		}
